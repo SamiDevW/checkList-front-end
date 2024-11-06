@@ -1,0 +1,16 @@
+{
+  "name": "checklist-front",
+  "version": "1.0.0",
+  "description": "- Home and login links in navbar\r - Add a work link inside of cards (bottom-right icon)\r ## css added\r - hover on buttons and cards \r ## features to add\r - adding a work \r - login \r - search\r - add missing accessibilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1",
+    "joi": "^17.13.3"
+  }
+}

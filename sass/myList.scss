@@ -1,0 +1,40 @@
+@import "./libs/style";
+@import "libs/cards.scss";
+@import "libs/container.scss";
+
+.container {
+	position: relative;
+}
+.btn-list {
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+.listMode {
+	flex-direction: column;
+}
+.cardListMode {
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: fit-content;
+	padding: 0;
+	margin: 0;
+	margin-top: 30px;
+	.card-header {
+		text-align: flex-start !important;
+		width: fit-content;
+		padding-left: 10px;
+		h3 {
+			margin: 0;
+		}
+	}
+	.card-img {
+		display: none;
+	}
+	.card-icons {
+		width: fit-content;
+		gap: 5px;
+		padding-right: 5px;
+	}
+}

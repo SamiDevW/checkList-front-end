@@ -4,62 +4,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./css/home.css">
         <title>CheckList</title>
     </head>
 
     <body>
-        <div class="background">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-
 
         <header>
             <nav>
-                <div>
-                    <a href="#"><img id="logo" src="./icons/Icon_checklist.svg" alt="Logo"></a>
+                <div class="logo-container">
+                    <a href="#"><img id="logo" src="./icons/Icon_checklist.webp" alt="Logo"></a>
                 </div>
-                <div id="navbar">
-                    <a href="#">Home</a>
-                    <a href="#">MyList</a>
-                    <a href="#">Search</a>
-                    <a href="#">Market</a>
-                    <a href="#"><img src="./icons/icons8-male-user-ios-17-glyph/icons8-male-user-30.png"
+                <a href="#" class="menu-burger">
+                    <img src="./icons/icons8-menu-ios-17-glyph/icons8-menu-60.png" alt="menu icon">
+                </a>
+                <div class="navbar">
+                    <a class="text-anchor" href="/index.html">Home</a>
+                    <a class="text-anchor" href="./html/myList.html">MyList</a>
+                    <a class="text-anchor" href="#">Search</a>
+                    <a class="text-anchor" href="#">Market</a>
+                    <a href="./html/login.html"><img src="./icons/icons8-male-user-ios-17-glyph/icons8-male-user-60.png"
                             alt="login"></a>
-                    <a href="#"><img src="./icons/icons8-login-ios-17-glyph/icons8-login-30.png" alt="login"></a>
+                    <a href="/login.html"><img src="./icons/icons8-login-ios-17-glyph/icons8-login-60.png"
+                            alt="login"></a>
                 </div>
 
             </nav>
         </header>
         <main>
-            <div id="loginContainer">
-                <h1>LOGIN</h1>
-                <form action="#" id="loginForm">
-                    <label for="username">Username :</label>
-                    <input class="formInput" type="email" name="username" id="username">
-                    <label for="username">Password :</label>
-                    <input class="formInput" type="email" name="username" id="username">
-                    <a href="#" class="linked-text">
-                        Forgot your password ?
-                    </a>
-                    <a href="#" class="linked-text">Create an account######################""?</a>
-                    <button class="btn">LOGIN</button>
-                </form>
-                <p>Or use :</p>
-                <div class="alt-log">
-                    <div>
-                        <img src="./icons/icons8-google-ios-17-glyph/icons8-google-30.png" alt="Google link">
-                        <img src="./icons/icons8-facebook-ios-17-glyph/icons8-facebook-30.png" alt="facebook link">
+            <h1>Home</h1>
+            <h2>Top Anime of the moment
+
+            </h2>
+            <section class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Bleach the manga of the year
+                        </h3>
+                    </div>
+
+                    <div class="card-img">
+                        <img class="imgTest" src="./images/olena-bohovyk-Ft_Wn-K5YH8-unsplash.jpg" alt="manga">
+                    </div>
+                    <div class="card-icons">
+                        <a href="#"><img src="./icons/icons8-heart-ios-17-glyph/icons8-heart-60.png"
+                                alt="add to wishlist"></a>
+                        <a href="/html/addWork.html"><img
+                                src="./icons//icons8-add-file-ios-17-outlined/icons8-add-file-50.png"
+                                alt="add to MyList"></a>
                     </div>
                 </div>
 
-            </div>
+            </section>
 
         </main>
-
+        <footer>
+            <p>Copyrights 2024 &copy;</p>
+            <div id="contacts">
+                <a href="#"><img src="./icons/icons8-linkedin-ios-17-glyph/icons8-linkedin-60.png"
+                        alt="admin linkedin"></a>
+                <a href="#"><img src="./icons/icons8-github-ios-17-glyph/icons8-github-60.png" alt="admin github"></a>
+            </div>
+        </footer>
+        <!-- <script src="./javascript/addCards.js"></script> -->
+        <script type="module" src="./javascript/getApiData.js"></script>
+        <script src="./javascript/navbarResponsive.js"></script>
     </body>
 
 </html>
