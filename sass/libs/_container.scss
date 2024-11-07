@@ -1,15 +1,11 @@
 .container {
-	background-color: $container-background;
+	@include containerStyle();
 	display: flex;
 	justify-content: center;
-	width: 95%;
-	flex-wrap: wrap;
 	height: fit-content;
-	border-radius: $container-border-radius;
 	padding: 10px;
 	font-size: 1.5rem;
-	box-shadow: 1px 1px 5px 3px rgba(255, 255, 255, 0.2);
-	margin: 40px 20px;
+	margin: 20px;
 }
 
 @media screen and (max-width: 640px) {

@@ -1,3 +1,12 @@
 @import "./libs/style";
 @import "libs/container";
 @import "libs/cards";
+
+.container {
+	flex-wrap: wrap;
+}
+.card {
+	a {
+		@include anchor-style(white);
+	}
+}

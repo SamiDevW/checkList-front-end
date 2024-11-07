@@ -4,11 +4,22 @@
 
 .container {
 	position: relative;
+	padding: 40px 20px;
+	flex-wrap: wrap;
+}
+input[type="checkbox"] {
+	transform: scale(1.8);
 }
 .btn-list {
 	position: absolute;
 	right: 20px;
-	top: 0;
+	top: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	// border: white solid 1px;
+}
+.btn-list:hover {
+	background-color: aliceblue;
 }
 .listMode {
 	flex-direction: column;
@@ -22,7 +33,6 @@
 	margin: 0;
 	margin-top: 30px;
 	.card-header {
-		text-align: flex-start !important;
 		width: fit-content;
 		padding-left: 10px;
 		h3 {
@@ -33,7 +43,8 @@
 		display: none;
 	}
 	.card-icons {
-		width: fit-content;
+		width: 20%;
+		justify-content: space-evenly;
 		gap: 5px;
 		padding-right: 5px;
 	}

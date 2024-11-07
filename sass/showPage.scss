@@ -1,0 +1,19 @@
+@import "./libs/style";
+@import "libs/container";
+
+.container {
+	color: whitesmoke;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	.show-info {
+		width: 40%;
+	}
+	.show-img {
+		display: flex;
+		width: 40%;
+		img {
+			border-radius: 15px;
+		}
+	}
+}

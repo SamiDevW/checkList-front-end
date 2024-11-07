@@ -1,8 +1,13 @@
 @import "./reset.scss";
 @import "./variables";
+@import "./mixins";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap");
-
+@mixin anchor-style($color) {
+	text-decoration: none;
+	width: fit-content;
+	color: $color;
+}
 html {
 	font-size: $body-size;
 }
@@ -11,13 +16,10 @@ body {
 	flex-direction: column;
 	background-color: $secondary-background;
 	font-family: "Roboto Condensed", sans-serif;
-
 	height: 100vh;
 }
 a {
-	text-decoration: none;
-	width: fit-content;
-	color: $primary-color;
+	@include anchor-style($primary-color);
 }
 #logo {
 	padding-top: 5px;

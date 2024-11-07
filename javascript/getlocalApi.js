@@ -8,10 +8,7 @@ fetch('http://localhost:8000/works')
     .then(data => {
         data.forEach(x => {
             card(container, x.title, x.image || randomImg)
-
-
         });
-
         const cardElement = document.querySelectorAll(".card")
         toggleList.addEventListener("click", () => {
             container.classList.toggle('listMode')

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/signUp.css">
         <title>CheckList</title>
     </head>
 
@@ -34,20 +34,40 @@
         <main>
 
             <div id="loginContainer">
-                <h1>LOGIN</h1>
-
+                <h1>SIGNUP</h1>
                 <form action="#" id="loginForm">
+                    <div id="data">
+                        <div class="input-form">
+                            <label for="firstname">Firstname :</label>
+                            <input class="inputStyle" type="email" name="firstname" id="firstname" required>
+                        </div>
+                        <div class="input-form">
+                            <label for="lastname">Lastname :</label>
+                            <input class="inputStyle" type="email" name="lastname" id="lastname" required>
+                        </div>
 
-                    <label for="username">Email :</label>
-                    <input class="formInput" type="email" name="username" id="username" required>
-                    <label for="password">Password :</label>
-                    <input class="formInput" type="password" name="password" id="password" required
-                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
-                    <a href="#" class="linked-text">
-                        Forgot your password?
-                    </a>
-                    <a href="./signUp.html" class="linked-text">Create an account?</a>
-                    <button class="btn">LOGIN</button>
+
+                    </div>
+                    <div class="input-form">
+                        <label for="username">Email :</label>
+                        <input class="inputStyle" type="email" name="username" id="username" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="password">Password :</label>
+                        <input class="inputStyle" type="password" name="password" id="password" required
+                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                    </div>
+                    <div class="input-form">
+                        <label for="password">Confirm password :</label>
+                        <input class="inputStyle" type="password" name="password" id="password" required
+                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+
+                    </div>
+                    <div class="input-form terms">
+                        <input type="checkbox" name="" id="">
+                        <a href="#" class="linked-text">I agree to the Terms & Conditions</a>
+                    </div>
+                    <button class="btn create">Create an account</button>
                 </form>
                 <p>Or use :</p>
                 <div class="alt-log">

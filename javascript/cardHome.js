@@ -8,7 +8,7 @@ export const card = function (cardContainer, title, image) {
  <img src="${image}" alt="manga">
 </div>
 <div class="card-icons">
- <a href="#"><img src="./icons/icons8-heart-ios-17-glyph/icons8-heart-60.png"
+ <a href="#"><img src="../icons/icons8-heart-ios-17-glyph/icons8-heart-60.png"
                                 alt="add to wishlist"></a>
  <a href="/html/addWork.html"><img
          src="../icons/icons8-add-file-ios-17-outlined/icons8-add-file-50.png"

@@ -16,6 +16,7 @@ export const card = function (cardContainer, title, image) {
         alt="add to MyList"></a>
         <a href="/html/addWork.html"><img src="../icons/icons8-modifier-ios-17-glyph/icons8-modifier-60.png"
         alt="add to MyList"></a>
+        <input type="checkbox">
         
 </div>
         

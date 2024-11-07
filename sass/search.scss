@@ -1,0 +1,29 @@
+@import "./libs/style";
+@import "libs/container";
+@import "libs/cards";
+
+.container {
+	flex-wrap: wrap;
+}
+.card {
+	a {
+		@include anchor-style(white);
+	}
+}
+.searchBar {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	margin-left: 20px;
+	padding-left: 10px;
+	color: antiquewhite;
+	width: 100%;
+	font-size: $h3;
+	select {
+		@include inputStyle;
+	}
+	.searchInput {
+		@include inputStyle();
+		width: 30%;
+	}
+}

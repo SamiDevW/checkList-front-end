@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css/myList.css">
+        <link rel="stylesheet" href="../css/search.css">
         <title>CheckList</title>
     </head>
 
@@ -33,42 +33,35 @@
             </nav>
         </header>
         <main>
-            <h1>MyList</h1>
-            <h2>
-                Saved Anime
-            </h2>
+            <h1>Search</h1>
 
-            <section class="container ">
-                <img class="btn-list" src="../icons/icons8-list-ios-17-glyph/icons8-list-30.png" alt="">
-                <div class="card ">
 
-                    <div class="card-header">
-                        <h3>Bleach the manga of the year
-                        </h3>
-                    </div>
-
-                    <div class="card-img">
-                        <img class="imgTest" src="../images/olena-bohovyk-Ft_Wn-K5YH8-unsplash.jpg" alt="manga">
-                    </div>
-                    <div class="card-icons">
-                        <a href="#"><img src="../icons/icons8-heart-ios-17-filled/icons8-heart-50.png"
-                                alt="add to wishlist"></a>
-                        <a href="#">
-                            <form action="/works" method="POST"><img
-                                    src="../icons/icons8-trash-can-ios-17-glyph/icons8-trash-can-60.png"
-                                    alt="add to MyList"></form>
-                        </a>
-                        <a href="/html/addWork.html"><img
-                                src="../icons/icons8-modifier-ios-17-glyph/icons8-modifier-60.png"
-                                alt="add to MyList"></a>
-                        <input type="checkbox">
-                    </div>
+            <section class="searchBar">
+                <label for="search">Search</label>
+                <input class="searchInput" id="search" name="search" type="text">
+                <div class="input-add-form select">
+                    <label for="category">Category :</label>
+                    <select name="category" id="category" required>
+                        <option value="book">book</option>
+                        <option value="manga">manga</option>
+                        <option value="series">series</option>
+                    </select>
                 </div>
+                <div class="input-add-form select">
+                    <label for="genre">Genre :</label>
+                    <select name="genre" id="genre">
+                        <option value="action">action</option>
+                        <option value="fantasy">fantasy</option>
+                        <option value="drama">drama</option>
+                    </select>
+                </div>
+                <img src="../icons/icons8-plus-ios-17-glyph/icons8-plus-30.png" alt="">
+            </section>
+            <section class="container ">
+
 
             </section>
-            <div class="titles">
 
-            </div>
         </main>
         <footer>
             <p>Copyrights 2024 &copy;</p>
@@ -79,7 +72,7 @@
             </div>
         </footer>
 
-        <script type="module" src="../javascript/getlocalApi.js"></script>
+        <script type="module" src="../javascript/getApiData.js"></script>
         <script src="../javascript/navbarResponsive.js"></script>
         <!-- <script src="../javascript/toggleDisplayMode.js"></script> -->
         <script src="https://kit.fontawesome.com/0c93c1afa2.js" crossorigin="anonymous"></script>

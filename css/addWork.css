@@ -229,17 +229,15 @@ nav .navbar .text-anchor:hover {
 }
 .container {
   background-color: rgba(40, 40, 38, 0.3);
+  border-radius: 50px;
+  box-shadow: 1px 1px 5px 3px rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: center;
-  width: 95%;
-  flex-wrap: wrap;
   height: -moz-fit-content;
   height: fit-content;
-  border-radius: 50px;
   padding: 10px;
   font-size: 1.5rem;
-  box-shadow: 1px 1px 5px 3px rgba(255, 255, 255, 0.2);
-  margin: 40px 20px;
+  margin: 20px;
 }
 
 @media screen and (max-width: 640px) {
@@ -250,9 +248,8 @@ nav .navbar .text-anchor:hover {
 }
 .container {
   width: 50%;
-  display: flex;
+  padding: 0;
   justify-content: center;
-  align-items: center;
 }
 
 form {
@@ -263,10 +260,15 @@ form {
   gap: 10px;
 }
 form label {
-  display: inline-block;
   font-size: 1.6rem;
   font-weight: bold;
   color: #fc1f15;
+}
+form .input-add-form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
 }
 form input,
 form select,
@@ -274,12 +276,13 @@ form textarea {
   border-radius: 15px;
   color: #fc1f15;
 }
+form input,
 form textarea {
+  padding: 8px;
   width: 30vw;
-  height: 20rem;
 }
-form input {
-  width: 23vw;
+form textarea {
+  height: 20rem;
 }
 form select {
   width: -moz-fit-content;
@@ -288,36 +291,10 @@ form select {
   padding: 3px;
 }
 
-.img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  margin: 20px 0;
-}
-.img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.input-add-form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .btn-container {
   display: flex;
   width: 100%;
   justify-content: center;
-}
-
-input,
-textarea {
-  padding: 8px;
 }
 
 @media screen and (max-width: 1024px) {
