@@ -278,6 +278,7 @@ nav .navbar .text-anchor:hover {
   width: 60%;
 }
 .card .card-img img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -301,6 +302,7 @@ nav .navbar .text-anchor:hover {
 .card:hover {
   opacity: 0.8;
   box-shadow: 1px 1px 5px 3px rgba(252, 31, 21, 0.5);
+  transform: translateY(-5px);
 }
 
 @media screen and (max-width: 1024px) {

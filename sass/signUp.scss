@@ -77,16 +77,23 @@ input:invalid {
 }
 @media screen and (max-width: 1200px) {
 	#loginContainer {
-		width: 35%;
+		width: 80%;
 	}
 }
 @media screen and (max-width: 850px) {
 	#loginContainer {
-		width: 50%;
+		width: 90%;
+		#data {
+			flex-direction: column;
+			gap: 5px;
+			.input-form {
+				width: 80%;
+			}
+		}
 	}
 }
-@media screen and (max-width: 640px) {
-	#loginContainer {
-		width: 70%;
-	}
-}
+// @media screen and (max-width: 640px) {
+// 	#loginContainer {
+// 		width: 70%;
+// 	}
+// }

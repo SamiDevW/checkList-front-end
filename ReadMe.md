@@ -2,14 +2,29 @@
 
 ## Pages :
 
-### Home/Add A work/ Login
+### Home :
 
-- Home and login links in navbar
-- Add a work link inside of cards (bottom-right icon)
+- access in navbar
 
-## css added
+### MyList
 
-- hover on buttons and cards
+- access in navbar
+
+### market
+
+- access in navbar
+
+### Login
+
+- access in navbar (profile and sign in icons)
+
+### SignUp
+
+- access in login page (Create an account link)
+
+### ShowPage
+
+- access individual info in cards titles
 
 ## features to add
 

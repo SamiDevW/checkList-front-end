@@ -2,7 +2,7 @@
 
 export const card = function (cardContainer, title, image) {
     let cardHTML = `
-    <div class='card-header'>  <h3>${title}</h3></div>
+    <div class='card-header'> <a href="/html/showPage.html"><h3>${title}</h3></a> </div>
 
 <div class="card-img">
  <img src="${image}" alt="manga">

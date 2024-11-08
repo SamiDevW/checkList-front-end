@@ -316,16 +316,18 @@ input:invalid {
 
 @media screen and (max-width: 1200px) {
   #loginContainer {
-    width: 35%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 850px) {
   #loginContainer {
-    width: 50%;
+    width: 90%;
   }
-}
-@media screen and (max-width: 640px) {
-  #loginContainer {
-    width: 70%;
+  #loginContainer #data {
+    flex-direction: column;
+    gap: 5px;
+  }
+  #loginContainer #data .input-form {
+    width: 80%;
   }
 }/*# sourceMappingURL=signUp.css.map */
