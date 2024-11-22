@@ -37,11 +37,6 @@ fetch('../jikanAppFullData.json')
                 cardIcons.appendChild(iconLink)
             }
 
-
-
-
-
         })
     })
 
-// x.title, x.images.jpg.image_url
