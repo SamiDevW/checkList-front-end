@@ -26,4 +26,7 @@
 
 - access individual info in cards titles
 
+## Latest added :
 
+- getMokedData.js : create a card with JS DOM methods instead of using only innerHTML.
+- getFormData.js : get inputs data from inputs and log them (Form can be submitted with keyboard(Enter key)).
