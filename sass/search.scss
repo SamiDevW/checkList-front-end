@@ -1,10 +1,17 @@
 @import "./libs/style";
-@import "libs/container";
 @import "libs/cards";
-
 .container {
+	@include containerStyle();
+	display: flex;
+	justify-content: center;
+	height: fit-content;
+	padding: 10px;
+	font-size: 1.5rem;
+	margin: 20px 0;
 	flex-wrap: wrap;
+	width: 80%;
 }
+
 .card {
 	a {
 		@include anchor-style(white);
@@ -17,13 +24,45 @@
 	margin-left: 20px;
 	padding-left: 10px;
 	color: antiquewhite;
-	width: 100%;
 	font-size: $h3;
-	select {
-		@include inputStyle;
-	}
 	.searchInput {
 		@include inputStyle();
 		width: 30%;
+	}
+}
+#filters-container {
+	@include containerStyle();
+	color: whitesmoke;
+	margin: 20px 20px 0px;
+	padding: 10px 10px;
+	gap: 20px;
+	display: flex;
+	width: fit-content;
+	justify-content: center;
+	select {
+		@include inputStyle;
+	}
+	label {
+		font-size: 2rem;
+	}
+}
+#display-block {
+	display: flex;
+	justify-content: center;
+}
+@media screen and (max-width: 640px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+#page-control {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0px;
+	gap: 10px;
+	#page {
+		font-size: 3rem;
+		color: antiquewhite;
 	}
 }

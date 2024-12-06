@@ -1,12 +1,18 @@
 @import "./libs/style";
 @import "libs/container";
-// @import "libs/cards";
-
 .container {
+	@include containerStyle();
+	display: flex;
+	justify-content: center;
+	height: fit-content;
+	font-size: 1.5rem;
+	margin: 20px;
 	flex-wrap: wrap;
+	width: 80%;
 	gap: 30px;
 	padding: 20px 10px;
 }
+
 .searchBar {
 	display: flex;
 	gap: 10px;
@@ -79,4 +85,15 @@
 }
 .add-to-cart:hover {
 	background-color: $primary-color;
+}
+#display-block {
+	display: flex;
+	justify-content: center;
+}
+
+@media screen and (max-width: 640px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
 }

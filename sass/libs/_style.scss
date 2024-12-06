@@ -38,6 +38,7 @@ h1 {
 	font-size: $h2;
 }
 h2 {
+	text-align: center;
 	font-size: $h2;
 	margin: 10px 0;
 	color: #fc1f15;
@@ -49,15 +50,7 @@ h2 {
 p {
 	font-size: $text-size;
 }
-main {
-	// height: 100%;
-	margin-top: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	// filter: blur(10rem);
-}
+
 .btn {
 	color: $btn-txt-color;
 	background-color: $primary-color;

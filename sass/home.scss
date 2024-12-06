@@ -1,12 +1,41 @@
 @import "./libs/style";
-@import "libs/container";
 @import "libs/cards";
 
 .container {
+	@include containerStyle();
+	display: flex;
+	justify-content: center;
+	height: fit-content;
+	padding: 10px;
+	font-size: 1.5rem;
+	margin: 20px;
 	flex-wrap: wrap;
+	width: 80%;
 }
+#display-block {
+	display: flex;
+	justify-content: center;
+}
+
 .card {
 	a {
 		@include anchor-style(white);
+	}
+}
+
+#page-control {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0px;
+	gap: 10px;
+	#page {
+		font-size: 3rem;
+		color: antiquewhite;
+	}
+}
+@media screen and (max-width: 640px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
 	}
 }

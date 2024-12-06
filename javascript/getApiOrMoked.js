@@ -1,18 +1,51 @@
+import { dataSlicer } from "./utils.js";
+let current_page = 1; // staring page
+const elementsPerPage = 9; // rows_per_page
+
 const container = document.querySelector('.container');
-const fetchDataAndDisplay = async () => {
-    const fetchs = [fetch('https://api.jikan.moe/v4/top/anime'), fetch('../jikanAppFullData.json')]
-    const response = await Promise.any(fetchs)
-    // const response = await fetch('https://api.jikan.moe/v4/top/anime');
-    console.log(response);
-
+const btnNext = document.querySelector('#btnNext');
+const btnPrevious = document.querySelector('#btnPrevious');
+const pageNumber = document.querySelector('#page');
+pageNumber.innerText = current_page;
+//
+const fetchData = async () => {
+    const fetchs = [fetch('https://api.jikan.moe/v4/top/anime'), fetch('../jikanAppFullData.json')];
+    const response = await Promise.any(fetchs);
     if (response.ok) {
-        const data = await response.json()
-        displayData(data)
+        const data = await response.json();
+        return data;
     }
-
 }
-const displayData = (dataFile) => {
-    dataFile.data.forEach(el => {
+//
+const getDataAndDisplay = async () => {
+    const data = await fetchData();
+    sliceAndDisplay(data);
+    btnNext.addEventListener('click', () => {
+        current_page += 1;
+        pageNumber.innerText = current_page;
+        container.innerHTML = "";
+        sliceAndDisplay(data);
+        console.log(current_page)
+    })
+    btnPrevious.addEventListener('click', () => {
+        if (current_page > 1) {
+            container.innerHTML = "";
+            current_page -= 1;
+            pageNumber.innerText = current_page;
+            sliceAndDisplay(data);
+        }
+    })
+}
+//
+const sliceAndDisplay = (data) => {
+    const slicedData = dataSlicer(data.data, current_page, elementsPerPage);
+    btnPrevious.disabled = current_page === 1;
+    btnNext.disabled = current_page === Math.ceil(data.data.length / elementsPerPage);
+    displayData(slicedData)
+}
+//
+const displayData = (data) => {
+    data.forEach(el => {
         // Add card to container
         const card = document.createElement('div');
         card.setAttribute('class', 'card');
@@ -48,4 +81,5 @@ const displayData = (dataFile) => {
 
     })
 }
-fetchDataAndDisplay()
+// 
+getDataAndDisplay()

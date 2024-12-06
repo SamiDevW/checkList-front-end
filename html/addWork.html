@@ -33,51 +33,47 @@
         </header>
         <main>
 
-            <h1>Add a work</h1>
-            <section class="container">
-                <form method="POST" action="http://localhost:8000/works">
+
+            <section id="display-block">
+                <h1>Add a work</h1>
+                <div class="container">
+                    <form method="POST" action="http://localhost:8000/works">
 
 
-                    <div class="input-add-form">
-                        <label for="title">Title :</label>
-                        <input type="text" id="title" name="title" required>
-                    </div>
-                    <div class="input-add-form select">
-                        <label for="category">Category :</label>
-                        <select name="category" id="category" required>
-                            <option value="book">book</option>
-                            <option value="manga">manga</option>
-                            <option value="series">series</option>
-                        </select>
-                    </div>
-                    <div class="input-add-form select">
-                        <label for="genre">Genre :</label>
-                        <select name="genre" id="genre">
-                            <option value="action">action</option>
-                            <option value="fantasy">fantasy</option>
-                            <option value="drama">drama</option>
-                        </select>
-                    </div>
-                    <div class="input-add-form">
-                        <label for="image">image :</label>
-                        <input name="image" type="url" id="image" placeholder="https://api.jikan.moe/v4/top/anime"
-                            required>
-                    </div>
-                    <label for="comment">Comment :</label>
-                    <textarea name="comment" id="comment"></textarea>
-                    <div class="btn-container">
-                        <button class="btn">SAVE</button>
-                    </div>
-
-                    </div>
-
-
-                </form>
-                <!-- <div class=".img">
-                    <img src="/images/olena-bohovyk-Ft_Wn-K5YH8-unsplash.jpg" alt="added image">
-                </div> -->
-
+                        <div class="input-add-form">
+                            <label for="title">Title :</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        <div class="input-add-form select">
+                            <label for="category">Category :</label>
+                            <select name="category" id="category" required>
+                                <option value="book">book</option>
+                                <option value="manga">manga</option>
+                                <option value="series">series</option>
+                            </select>
+                        </div>
+                        <div class="input-add-form select">
+                            <label for="genre">Genre :</label>
+                            <select name="genre" id="genre">
+                                <option value="action">action</option>
+                                <option value="fantasy">fantasy</option>
+                                <option value="drama">drama</option>
+                            </select>
+                        </div>
+                        <div class="input-add-form">
+                            <label for="image">image :</label>
+                            <input name="image" type="url" id="image" placeholder="https://api.jikan.moe/v4/top/anime"
+                                required>
+                        </div>
+                        <label for="comment">Comment :</label>
+                        <textarea name="comment" id="comment"></textarea>
+                        <div class="btn-container">
+                            <button class="btn">SAVE</button>
+                        </div>
+                    </form>
+                </div>
             </section>
+
 
         </main>
         <footer>

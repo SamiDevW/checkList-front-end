@@ -40,7 +40,11 @@
             <form class="searchBar" action="">
                 <label for="search">Search</label>
                 <input class="searchInput" id="search" name="search" type="text">
-                <div class="input-add-form select">
+
+
+            </form>
+            <div id="filters-container">
+                <div class="filter">
                     <label for="category">Category :</label>
                     <select name="category" id="category" required>
                         <option value="book">book</option>
@@ -48,7 +52,7 @@
                         <option value="series">series</option>
                     </select>
                 </div>
-                <div class="input-add-form select">
+                <div class="filter">
                     <label for="genre">Genre :</label>
                     <select name="genre" id="genre">
                         <option value="action">action</option>
@@ -57,13 +61,19 @@
                     </select>
                 </div>
                 <img src="../icons/icons8-plus-ios-17-glyph/icons8-plus-30.png" alt="">
-            </form>
+            </div>
+
+            <section id="display-block">
+                <div class="container ">
 
 
-            <section class="container ">
-
-
+                </div>
             </section>
+            <div id="page-control">
+                <button class="btn" id="btnPrevious">Previous</button>
+                <p id="page"></p>
+                <button class="btn" id="btnNext">Next</button>
+            </div>
 
         </main>
         <footer>
@@ -75,7 +85,7 @@
             </div>
         </footer>
 
-        <script src="../javascript/getApiOrMoked.js"></script>
+        <script type="module" src="../javascript/getApiOrMoked.js"></script>
         <script src="../javascript/navbarResponsive.js"></script>
         <script src="../javascript/getFormData.js"></script>
     </body>

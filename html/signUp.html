@@ -32,55 +32,55 @@
             </nav>
         </header>
         <main>
+            <section id="display-block">
+                <div id="loginContainer">
+                    <h1>SIGNUP</h1>
+                    <form action="#" id="loginForm">
+                        <div id="data">
+                            <div class="input-form">
+                                <label for="firstname">Firstname :</label>
+                                <input class="inputStyle" type="email" name="firstname" id="firstname" required>
+                            </div>
+                            <div class="input-form">
+                                <label for="lastname">Lastname :</label>
+                                <input class="inputStyle" type="email" name="lastname" id="lastname" required>
+                            </div>
 
-            <div id="loginContainer">
-                <h1>SIGNUP</h1>
-                <form action="#" id="loginForm">
-                    <div id="data">
-                        <div class="input-form">
-                            <label for="firstname">Firstname :</label>
-                            <input class="inputStyle" type="email" name="firstname" id="firstname" required>
+
                         </div>
                         <div class="input-form">
-                            <label for="lastname">Lastname :</label>
-                            <input class="inputStyle" type="email" name="lastname" id="lastname" required>
+                            <label for="username">Email :</label>
+                            <input class="inputStyle" type="email" name="username" id="username" required>
                         </div>
+                        <div class="input-form">
+                            <label for="password">Password :</label>
+                            <input class="inputStyle" type="password" name="password" id="password" required
+                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                        </div>
+                        <div class="input-form">
+                            <label for="password">Confirm password :</label>
+                            <input class="inputStyle" type="password" name="password" id="password" required
+                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
 
+                        </div>
+                        <div class="input-form terms">
+                            <input type="checkbox" name="" id="">
+                            <a href="#" class="linked-text">I agree to the Terms & Conditions</a>
+                        </div>
+                        <button class="btn create">Create an account</button>
+                    </form>
+                    <p>Or use :</p>
+                    <div class="alt-log">
+                        <div>
+                            <a href="#"><img src="../icons/icons8-google-ios-17-glyph/icons8-google-30.png"
+                                    alt="Google link"></a>
+                            <a href="#"><img src="../icons/icons8-facebook-ios-17-glyph/icons8-facebook-30.png"
+                                    alt="facebook link"></a>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div class="input-form">
-                        <label for="username">Email :</label>
-                        <input class="inputStyle" type="email" name="username" id="username" required>
-                    </div>
-                    <div class="input-form">
-                        <label for="password">Password :</label>
-                        <input class="inputStyle" type="password" name="password" id="password" required
-                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
-                    </div>
-                    <div class="input-form">
-                        <label for="password">Confirm password :</label>
-                        <input class="inputStyle" type="password" name="password" id="password" required
-                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
-
-                    </div>
-                    <div class="input-form terms">
-                        <input type="checkbox" name="" id="">
-                        <a href="#" class="linked-text">I agree to the Terms & Conditions</a>
-                    </div>
-                    <button class="btn create">Create an account</button>
-                </form>
-                <p>Or use :</p>
-                <div class="alt-log">
-                    <div>
-                        <a href="#"><img src="../icons/icons8-google-ios-17-glyph/icons8-google-30.png"
-                                alt="Google link"></a>
-                        <a href="#"><img src="../icons/icons8-facebook-ios-17-glyph/icons8-facebook-30.png"
-                                alt="facebook link"></a>
-                    </div>
                 </div>
-
-            </div>
-
+            </section>
         </main>
         <footer>
             <p>Copyrights 2024 &copy;</p>
@@ -90,7 +90,6 @@
                 <a href="#"><img src="../icons/icons8-github-ios-17-glyph/icons8-github-60.png" alt="admin github"></a>
             </div>
         </footer>
-        <script src="../javascript/validityCheck.js"></script>
         <script src="../javascript/navbarResponsive.js"></script>
         <script src="../javascript/getFormData.js"></script>
     </body>

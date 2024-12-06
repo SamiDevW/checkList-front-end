@@ -5,3 +5,4 @@
 - marketSeeds : Creates cards that show potential products of users using InnerHtml.
 - myListSeeds : Creates cards that show potential posts of users using InnerHtml.
 - navbarResponsive : makes a responsive navbar depending on the window's width.
+- added pagination into home and search pages.

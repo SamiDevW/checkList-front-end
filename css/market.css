@@ -116,6 +116,7 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   font-size: 2.6rem;
   margin: 10px 0;
   color: #fc1f15;
@@ -127,14 +128,6 @@ h2 {
 
 p {
   font-size: 1.8rem;
-}
-
-main {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn {
@@ -247,7 +240,17 @@ nav .navbar .text-anchor:hover {
   }
 }
 .container {
+  background-color: rgba(40, 40, 38, 0.3);
+  border-radius: 50px;
+  box-shadow: 1px 1px 5px 3px rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.5rem;
+  margin: 20px;
   flex-wrap: wrap;
+  width: 80%;
   gap: 30px;
   padding: 20px 10px;
 }
@@ -336,4 +339,16 @@ nav .navbar .text-anchor:hover {
 
 .add-to-cart:hover {
   background-color: #fc1f15;
+}
+
+#display-block {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=market.css.map */
