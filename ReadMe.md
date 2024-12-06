@@ -1,32 +1,7 @@
 # Checklist Website
 
-## Pages :
-
-### Home :
-
-- access in navbar
-
-### MyList
-
-- access in navbar
-
-### market
-
-- access in navbar
-
-### Login
-
-- access in navbar (profile and sign in icons)
-
-### SignUp
-
-- access in login page (Create an account link)
-
-### ShowPage
-
-- access individual info in cards titles
-
-## Latest added :
-
-- getMokedData.js : create a card with JS DOM methods instead of using only innerHTML.
-- getFormData.js : get inputs data from inputs and log them (Form can be submitted with keyboard(Enter key)).
+- getApiOrMoked.js : Creates cards from either API or LOCAL mocked data using DOM js manipulation.
+- getFormData.js : Gets data from the form element and constructs an object based on the input names and values.
+- marketSeeds : Creates cards that show potential products of users using InnerHtml.
+- myListSeeds : Creates cards that show potential posts of users using InnerHtml.
+- navbarResponsive : makes a responsive navbar depending on the window's width.
