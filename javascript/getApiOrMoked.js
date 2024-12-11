@@ -9,8 +9,11 @@ const pageNumber = document.querySelector('#page');
 pageNumber.innerText = current_page;
 //
 const fetchData = async () => {
-    const fetchs = [fetch('https://api.jikan.moe/v4/top/anime'), fetch('../jikanAppFullData.json')];
-    const response = await Promise.any(fetchs);
+    const urls = ['../jikanAppFullata.json', 'https://api.jikan.moe/v4/top/anime'];
+    let response = await fetch(urls[0])
+    if (!response.ok) {
+        response = await fetch(urls[1])
+    }
     if (response.ok) {
         const data = await response.json();
         return data;
