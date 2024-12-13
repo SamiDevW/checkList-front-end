@@ -31,7 +31,8 @@ const fetchData = async () => {
 const getDataAndDisplay = async () => {
     const dataResponse = await fetchData();
     sliceAndDisplay(dataResponse.data);
-    // if there's a search element
+    // if there's a search element search
+    // search is only on the search page
     if (search) {
         search.addEventListener('keyup', (e) => {
             container.innerHTML = '';
@@ -61,6 +62,6 @@ const sliceAndDisplay = (data) => {
     const slicedData = dataSlicer(data, current_page, elementsPerPage);
     btnPrevious.disabled = current_page === 1;
     btnNext.disabled = current_page === Math.ceil(data.length / elementsPerPage);
-    displayCards(slicedData, container)
+    displayCards(slicedData, container);
 }
-getDataAndDisplay()
+getDataAndDisplay();

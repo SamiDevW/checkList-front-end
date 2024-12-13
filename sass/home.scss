@@ -1,41 +1,28 @@
 @import "./libs/style";
-@import "libs/cards";
-
-.container {
-	@include containerStyle();
-	display: flex;
-	justify-content: center;
-	height: fit-content;
-	padding: 10px;
-	font-size: 1.5rem;
-	margin: 20px;
-	flex-wrap: wrap;
-	width: 80%;
-}
 #display-block {
 	display: flex;
+
 	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
-
-.card {
-	a {
-		@include anchor-style(white);
-	}
-}
-
-#page-control {
+#intro {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-	margin: 20px 0px;
-	gap: 10px;
-	#page {
-		font-size: 3rem;
-		color: antiquewhite;
+	padding: 2rem;
+	@include containerStyle();
+	h2,
+	h3 {
+		color: white;
 	}
-}
-@media screen and (max-width: 640px) {
-	.container {
-		flex-direction: column;
-		align-items: center;
+	h1 {
+		border-bottom: 1px white solid;
+		padding-bottom: 2rem;
+	}
+	#action-search {
+		font-size: $h3;
+		width: fit-content;
 	}
 }

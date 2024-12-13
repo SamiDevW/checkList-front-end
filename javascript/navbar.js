@@ -35,14 +35,14 @@ links.forEach(link => {
     navbar.appendChild(a);
 });
 
-// Add user and login icons
+// Add navbar icons
+const navIcons = document.createElement('div')
 const userIcon = document.createElement('a');
 userIcon.href = './login.html';
 const userImg = document.createElement('img');
 userImg.src = '../icons/icons8-male-user-ios-17-glyph/icons8-male-user-60.png';
 userImg.alt = 'login';
 userIcon.appendChild(userImg);
-
 const loginIcon = document.createElement('a');
 loginIcon.href = './login.html';
 const loginImg = document.createElement('img');
@@ -55,9 +55,10 @@ const signupImg = document.createElement('img');
 signupImg.src = '../icons/icons8-register-ios-17-glyph/icons8-register-60.png';
 signupImg.alt = 'signup';
 signupIcon.appendChild(signupImg);
-navbar.appendChild(userIcon);
-navbar.appendChild(loginIcon);
-navbar.appendChild(signupIcon);
+navIcons.appendChild(userIcon);
+navIcons.appendChild(loginIcon);
+navIcons.appendChild(signupIcon);
+navbar.appendChild(navIcons)
 nav.appendChild(navbar);
 
 function defineLogo(nav) {
