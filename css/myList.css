@@ -324,7 +324,7 @@ nav .navbar .text-anchor:hover {
 .container .checklist {
   display: flex;
   align-items: center;
-  height: 25rem;
+  height: 30rem;
   margin: 3rem 3rem 0;
   padding: 1rem;
   font-size: 2.3rem;
@@ -335,6 +335,7 @@ nav .navbar .text-anchor:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   gap: 1rem;
   border: 1px gray solid;
   border-radius: 15px;
@@ -355,6 +356,8 @@ nav .navbar .text-anchor:hover {
   height: 150px;
 }
 .container .checklist .checklist-header .checklist-image img {
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 15px;
 }
 .container .checklist .checklist-body {
@@ -386,50 +389,6 @@ nav .navbar .text-anchor:hover {
 
 input[type=checkbox] {
   transform: scale(1.8);
-}
-
-.btn-list {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-list:hover {
-  background-color: aliceblue;
-}
-
-.listMode {
-  flex-direction: column;
-}
-
-.cardListMode {
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0;
-  margin: 0;
-  margin-top: 30px;
-}
-.cardListMode .card-header {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-left: 10px;
-}
-.cardListMode .card-header h3 {
-  margin: 0;
-}
-.cardListMode .card-img {
-  display: none;
-}
-.cardListMode .card-icons {
-  width: 20%;
-  justify-content: space-evenly;
-  gap: 5px;
-  padding-right: 5px;
 }
 
 #display-block {

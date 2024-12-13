@@ -1,7 +1,6 @@
 @import "./libs/style";
 #display-block {
 	display: flex;
-
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
@@ -22,6 +21,7 @@
 		padding-bottom: 2rem;
 	}
 	#action-search {
+		margin-top: 2rem;
 		font-size: $h3;
 		width: fit-content;
 	}

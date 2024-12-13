@@ -1,8 +1,8 @@
 const container = document.querySelector(".container")
-const comment = document.querySelector(".checklist-comment")
-
+const placeholderP = document.querySelector(".checklist-comment")
+let placeholderPTC = placeholderP.textContent
+placeholderP.textContent = placeholderPTC.length > 400 ? placeholderPTC.substring(0, 400) + ' <show more...>' : placeholderPTC
 //
-const randomImg = 'https://picsum.photos/400?random=${Math.random()}'
 const card = function (container) {
     const listItems = JSON.parse(localStorage.getItem("myList"))
     listItems.forEach(x => {
@@ -31,11 +31,11 @@ const card = function (container) {
         checkBody.classList.add("checklist-body")
         const checkComment = document.createElement('p')
         //
-        x.comment = x.comment.length > 400 ? x.comment.substring(0, 400) + '...' : x.comment;
+        x.comment = x.comment.length > 400 ? x.comment.substring(0, 400) + ' <show more...>' : x.comment;
         console.log(typeof x.comment);
         checkComment.textContent = x.comment;
         const checkDynamic = document.createElement('div')
-        checkDynamic.innerHTML = `<button class="btn">Show review</button>
+        checkDynamic.innerHTML = `<button class="btn">Show work</button>
         <input type="checkbox" name="status" id="status" class="status">`
         //
         const body = [checkComment, checkDynamic]

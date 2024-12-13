@@ -1,5 +1,5 @@
 @import "./libs/style";
-@import "libs/container";
+
 .container {
 	@include containerStyle();
 	display: flex;
