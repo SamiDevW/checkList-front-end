@@ -1,3 +1,4 @@
+import navbarResponsive from "./components/navbarResponsive.js";
 // Create the nav element
 const nav = document.querySelector('nav');
 
@@ -58,10 +59,6 @@ navbar.appendChild(userIcon);
 navbar.appendChild(loginIcon);
 navbar.appendChild(signupIcon);
 nav.appendChild(navbar);
-
-
-
-
 
 function defineLogo(nav) {
     // Create the logo container
