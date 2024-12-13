@@ -1,16 +1,29 @@
 @import "./libs/style";
-@import "libs/container";
-
-.container {
-	color: whitesmoke;
+#display-block {
 	display: flex;
-	justify-content: space-between;
-	padding: 20px;
+	justify-content: center;
+}
+.container {
+	@include containerStyle();
+	display: flex;
+	justify-content: center;
+	height: fit-content;
+	padding: 10px;
+	font-size: 1.5rem;
+	margin: 20px;
+	width: 70%;
+	color: white;
 	.show-info {
 		width: 40%;
+		display: flex;
+		justify-content: center;
+
+		flex-direction: column;
+		gap: 10px;
 	}
 	.show-img {
 		display: flex;
+		justify-content: flex-end;
 		width: 40%;
 		img {
 			border-radius: 15px;

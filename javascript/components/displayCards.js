@@ -24,7 +24,7 @@ const displayCards = (data, container) => {
         card.appendChild(cardIcons)
         for (let i = 0; i <= 1; i++) {
             const iconSrc = ["../icons/icons8-heart-ios-17-glyph/icons8-heart-60.png", "../icons/icons8-add-file-ios-17-outlined/icons8-add-file-50.png"]
-            const iconLinks = ['#', "/html/addWork.html"]
+            const iconLinks = ['#', "./addWork.html"]
             const iconLink = document.createElement('a');
             iconLink.href = iconLinks[i]
             const icon = document.createElement('img');

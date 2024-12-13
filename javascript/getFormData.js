@@ -1,14 +1,14 @@
 import confirmPasswordMatch from "./components/confirmPasswordMatch.js"
+import checkValidity from "./components/checkValidity.js";
 const form = document.querySelector('form')
 console.log(form);
 const handleSubmit = (e) => {
+
     e.preventDefault()
     if (confirmPasswordMatch()) {
-
-        // const pwInfo = document.querySelector('#pwInfo')
-        // if (pwInfo) { }
         if (e.key === 'Enter' || e.type === "submit") {
             const inputs = document.querySelectorAll('input')
+
             const selects = document.querySelectorAll('select')
             let data;
             data = selects ? [...selects, ...inputs] : inputs;
@@ -28,5 +28,11 @@ const handleSubmit = (e) => {
 if (form) {
     form.addEventListener("submit", handleSubmit)
 }
-const firstname = document.querySelector('#firstname')
-firstname.addEventListener('keyup', () => console.dir(firstname))
+
+const password = document.querySelector('input[type=password]')
+password.addEventListener('keyup', (e) => {
+    console.log('changed');
+    console.log(password.validity.valid);
+    console.log(e.target.id);
+    checkValidity(e.target)
+})

@@ -3,7 +3,6 @@ const form = document.querySelector('form')
 
 const handleSubmit = (e) => {
     e.preventDefault()
-
     if (e.key === 'Enter' || e.type === "submit") {
         const inputs = document.querySelectorAll('input')
         const selects = document.querySelectorAll('select')
@@ -24,7 +23,6 @@ const handleSubmit = (e) => {
         }
         storedData = JSON.parse(localStorage.getItem("myList"))
         console.log(storedData);
-
         storedData.push(dataObject)
         localStorage.setItem("myList", JSON.stringify(storedData))
         window.location.href = "./myList.html";

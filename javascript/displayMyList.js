@@ -31,11 +31,11 @@ const card = function (container) {
         checkBody.classList.add("checklist-body")
         const checkComment = document.createElement('p')
         //
-        x.comment = x.comment.length > 400 ? x.comment.substring(0, 400) + ' <show more...>' : x.comment;
-        console.log(typeof x.comment);
-        checkComment.textContent = x.comment;
+        let shortenedComment = x.comment.length > 400 ? x.comment.substring(0, 400) + ' <show more...>' : x.comment;
+
+        checkComment.textContent = shortenedComment;
         const checkDynamic = document.createElement('div')
-        checkDynamic.innerHTML = `<button class="btn">Show work</button>
+        checkDynamic.innerHTML = `<button class="btn" id="showBtn">Show work</button>
         <input type="checkbox" name="status" id="status" class="status">`
         //
         const body = [checkComment, checkDynamic]
@@ -51,6 +51,12 @@ const card = function (container) {
         //
         checklist.setAttribute('class', 'checklist');
         container.appendChild(checklist)
+        const showBtn = document.querySelector('#showBtn')
+        showBtn.addEventListener('click', () => {
+            localStorage.setItem('temp', JSON.stringify(x))
+            window.location.href = "./showPage.html";
+        })
+
 
     })
 
