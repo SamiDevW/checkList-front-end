@@ -1,7 +1,9 @@
-import { dataSlicer } from "./utils.js";
+import dataSlicer from "./components/dataSlicer.js";
+import filterData from "./components/filterData.js";
+import displayCards from "./components/displayCards.js";
 let current_page = 1; // staring page
 const elementsPerPage = 9; // rows_per_page
-
+const search = document.querySelector('#search')
 const container = document.querySelector('.container');
 const btnNext = document.querySelector('#btnNext');
 const btnPrevious = document.querySelector('#btnPrevious');
@@ -9,25 +11,40 @@ const pageNumber = document.querySelector('#page');
 pageNumber.innerText = current_page;
 //
 const fetchData = async () => {
-    const urls = ['../jikanAppFullata.json', 'https://api.jikan.moe/v4/top/anime'];
-    let response = await fetch(urls[0])
-    if (!response.ok) {
-        response = await fetch(urls[1])
-    }
-    if (response.ok) {
-        const data = await response.json();
-        return data;
+    try {
+        const urls = ['../jikanAppFullData.json', 'https://api.jikan.moe/v4/top/anime'];
+        let response = await fetch(urls[0])
+        if (!response.ok) {
+            response = await fetch(urls[1])
+        }
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        }
+
+    } catch (error) {
+        console.log(error.message);
+
     }
 }
 //
 const getDataAndDisplay = async () => {
-    const data = await fetchData();
-    sliceAndDisplay(data);
+    const dataResponse = await fetchData();
+    sliceAndDisplay(dataResponse.data);
+    // if there's a search element
+    if (search) {
+        search.addEventListener('keyup', (e) => {
+            container.innerHTML = '';
+            const filteredData = filterData(e, dataResponse.data)
+            sliceAndDisplay(filteredData);
+        })
+    }
+
     btnNext.addEventListener('click', () => {
         current_page += 1;
         pageNumber.innerText = current_page;
         container.innerHTML = "";
-        sliceAndDisplay(data);
+        sliceAndDisplay(dataResponse.data);
         console.log(current_page)
     })
     btnPrevious.addEventListener('click', () => {
@@ -35,54 +52,15 @@ const getDataAndDisplay = async () => {
             container.innerHTML = "";
             current_page -= 1;
             pageNumber.innerText = current_page;
-            sliceAndDisplay(data);
+            sliceAndDisplay(dataResponse.data);
         }
     })
 }
 //
 const sliceAndDisplay = (data) => {
-    const slicedData = dataSlicer(data.data, current_page, elementsPerPage);
+    const slicedData = dataSlicer(data, current_page, elementsPerPage);
     btnPrevious.disabled = current_page === 1;
-    btnNext.disabled = current_page === Math.ceil(data.data.length / elementsPerPage);
-    displayData(slicedData)
+    btnNext.disabled = current_page === Math.ceil(data.length / elementsPerPage);
+    displayCards(slicedData, container)
 }
-//
-const displayData = (data) => {
-    data.forEach(el => {
-        // Add card to container
-        const card = document.createElement('div');
-        card.setAttribute('class', 'card');
-        container.appendChild(card);
-        //Add card-header to card
-        const cardHeader = document.createElement('div');
-        cardHeader.setAttribute('class', 'card-header');
-        card.appendChild(cardHeader);
-        const title = document.createElement('h3');
-        title.innerText = el.title
-        cardHeader.appendChild(title)
-        //Add card-img to card
-        const cardImg = document.createElement('div');
-        cardImg.setAttribute('class', 'card-img');
-        card.appendChild(cardImg);
-        const img = document.createElement('img');
-        img.src = el.images.jpg.image_url;
-        cardImg.appendChild(img)
-        //
-        const cardIcons = document.createElement('div');
-        cardIcons.setAttribute('class', 'card-icons');
-        card.appendChild(cardIcons)
-        for (let i = 0; i <= 1; i++) {
-            const iconSrc = ["../icons/icons8-heart-ios-17-glyph/icons8-heart-60.png", "../icons/icons8-add-file-ios-17-outlined/icons8-add-file-50.png"]
-            const iconLinks = ['#', "/html/addWork.html"]
-            const iconLink = document.createElement('a');
-            iconLink.href = iconLinks[i]
-            const icon = document.createElement('img');
-            icon.src = iconSrc[i]
-            iconLink.appendChild(icon)
-            cardIcons.appendChild(iconLink)
-        }
-
-    })
-}
-// 
 getDataAndDisplay()

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <script src="../javascript/navbar.js" defer></script>
         <link rel="stylesheet" href="../css/search.css">
         <title>CheckList</title>
     </head>
@@ -13,22 +13,6 @@
 
         <header>
             <nav>
-                <div class="logo-container">
-                    <a href="#"><img id="logo" src="../icons/Icon_checklist-removebg-preview.png" alt="Logo"></a>
-                </div>
-                <a href="#" class="menu-burger">
-                    <img src="../icons/icons8-menu-ios-17-glyph/icons8-menu-60.png" alt="menu icon">
-                </a>
-                <div class="navbar">
-                    <a class="text-anchor" href="../">Home</a>
-                    <a class="text-anchor" href="./myList.html">MyList</a>
-                    <a class="text-anchor" href="./search.html">Search</a>
-                    <a class="text-anchor" href="./market.html">Market</a>
-                    <a href="./login.html"><img src="../icons/icons8-male-user-ios-17-glyph/icons8-male-user-60.png"
-                            alt="login"></a>
-                    <a href="./login.html"><img src="../icons/icons8-login-ios-17-glyph/icons8-login-60.png"
-                            alt="login"></a>
-                </div>
 
             </nav>
         </header>
@@ -37,12 +21,11 @@
 
 
 
-            <form class="searchBar" action="">
+            <div class="searchBar" action="">
                 <label for="search">Search</label>
                 <input class="searchInput" id="search" name="search" type="text">
 
-
-            </form>
+            </div>
             <div id="filters-container">
                 <div class="filter">
                     <label for="category">Category :</label>
@@ -60,7 +43,10 @@
                         <option value="drama">drama</option>
                     </select>
                 </div>
-                <img src="../icons/icons8-plus-ios-17-glyph/icons8-plus-30.png" alt="">
+                <div>
+                    <img src="../icons/icons8-plus-ios-17-glyph/icons8-plus-30.png" alt="">
+                </div>
+
             </div>
 
             <section id="display-block">
@@ -86,8 +72,7 @@
         </footer>
 
         <script type="module" src="../javascript/getApiOrMoked.js"></script>
-        <script src="../javascript/navbarResponsive.js"></script>
-        <script src="../javascript/getFormData.js"></script>
+        <script type="module" src="../javascript/getFormData.js"></script>
     </body>
 
 </html>

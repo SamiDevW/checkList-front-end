@@ -138,6 +138,7 @@ p {
   border: none;
   border-radius: 15px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -174,7 +175,9 @@ nav .navbar {
 nav .navbar a {
   padding: 1rem;
 }
-nav .navbar a:hover {
+nav .navbar a img:hover {
+  height: -moz-fit-content;
+  height: fit-content;
   box-shadow: 1px 1px 5px 3px rgba(19, 18, 18, 0.2);
 }
 nav .navbar .text-anchor:hover {
@@ -300,25 +303,7 @@ nav .navbar .text-anchor:hover {
   border-radius: 50px;
   box-shadow: 1px 1px 5px 3px rgba(255, 255, 255, 0.2);
   display: flex;
-  justify-content: center;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 10px;
-  font-size: 1.5rem;
-  margin: 20px;
-}
-
-@media screen and (max-width: 640px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.container {
-  background-color: rgba(40, 40, 38, 0.3);
-  border-radius: 50px;
-  box-shadow: 1px 1px 5px 3px rgba(255, 255, 255, 0.2);
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   height: -moz-fit-content;
   height: fit-content;
@@ -327,6 +312,68 @@ nav .navbar .text-anchor:hover {
   margin: 20px;
   flex-wrap: wrap;
   width: 80%;
+}
+.container .checklist {
+  display: flex;
+  align-items: center;
+  height: 25rem;
+  margin: 3rem 3rem 0;
+  padding: 1rem;
+  font-size: 2.3rem;
+  color: #fc1f15;
+  gap: 2rem;
+}
+.container .checklist .checklist-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px gray solid;
+  border-radius: 15px;
+  height: 100%;
+  width: 20%;
+}
+.container .checklist .checklist-header h3 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+.container .checklist .checklist-header P {
+  font-size: 1.5rem;
+}
+.container .checklist .checklist-header .checklist-image {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 150px;
+}
+.container .checklist .checklist-header .checklist-image img {
+  border-radius: 15px;
+}
+.container .checklist .checklist-body {
+  border: 1px gray solid;
+  width: 80%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 15px;
+}
+.container .checklist .checklist-body .checklist-dynamic {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .checklist .checklist-body .checklist-dynamic .btn {
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+}
+.container .checklist .checklist-body .checklist-dynamic .status {
+  width: 15px;
+  height: 15px;
 }
 
 input[type=checkbox] {
@@ -382,9 +429,24 @@ input[type=checkbox] {
   justify-content: center;
 }
 
+#addBtn {
+  display: flex;
+  margin-left: 18rem;
+}
+#addBtn button {
+  background-color: white;
+  font-size: 2.3rem;
+  color: #fc1f15;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 @media screen and (max-width: 640px) {
   .container {
     flex-direction: column;
     align-items: center;
+  }
+  .container .checklist h3 {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=myList.css.map */

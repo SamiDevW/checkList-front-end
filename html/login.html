@@ -5,28 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/login.css">
+        <script src="../javascript/navbar.js" defer></script>
         <title>CheckList</title>
     </head>
 
     <body>
         <header>
             <nav>
-                <div class="logo-container">
-                    <a href="#"><img id="logo" src="../icons/Icon_checklist-removebg-preview.png" alt="Logo"></a>
-                </div>
-                <a href="#" class="menu-burger">
-                    <img src="../icons/icons8-menu-ios-17-glyph/icons8-menu-60.png" alt="menu icon">
-                </a>
-                <div class="navbar">
-                    <a class="text-anchor" href="../">Home</a>
-                    <a class="text-anchor" href="./myList.html">MyList</a>
-                    <a class="text-anchor" href="./search.html">Search</a>
-                    <a class="text-anchor" href="./market.html">Market</a>
-                    <a href="./login.html"><img src="../icons/icons8-male-user-ios-17-glyph/icons8-male-user-60.png"
-                            alt="login"></a>
-                    <a href="./login.html"><img src="../icons/icons8-login-ios-17-glyph/icons8-login-60.png"
-                            alt="login"></a>
-                </div>
+
             </nav>
         </header>
         <main>
@@ -37,7 +23,8 @@
                         <label for="username">Email :</label>
                         <input class="formInput" type="text" name="username" id="username" required>
                         <label for="password">Password :</label>
-                        <input class="formInput" type="password" name="password" id="password" required>
+                        <input class="formInput" type="password" name="password" id="password"
+                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
                         <a href="#" class="linked-text">
                             Forgot your password?
                         </a>
@@ -66,9 +53,8 @@
             </div>
         </footer>
 
-        <script src="../javascript/navbarResponsive.js"></script>
-        <script src="../javascript/getFormData.js"></script>
+
+        <script type="module" src="../javascript/getFormData.js"></script>
     </body>
 
 </html>
-<!-- pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" -->

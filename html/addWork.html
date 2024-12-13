@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/addWork.css">
+        <script type="module" src="../javascript/navbar.js" defer></script>
         <title>CheckList</title>
     </head>
 
@@ -12,34 +13,14 @@
 
         <header>
             <nav>
-                <div class="logo-container">
-                    <a href="#"><img id="logo" src="../icons/Icon_checklist-removebg-preview.png" alt="Logo"></a>
-                </div>
-                <a href="#" class="menu-burger">
-                    <img src="../icons/icons8-menu-ios-17-glyph/icons8-menu-60.png" alt="menu icon">
-                </a>
-                <div class="navbar">
-                    <a class="text-anchor" href="../">Home</a>
-                    <a class="text-anchor" href="./myList.html">MyList</a>
-                    <a class="text-anchor" href="./search.html">Search</a>
-                    <a class="text-anchor" href="./market.html">Market</a>
-                    <a href="./login.html"><img src="../icons/icons8-male-user-ios-17-glyph/icons8-male-user-60.png"
-                            alt="login"></a>
-                    <a href="./login.html"><img src="../icons/icons8-login-ios-17-glyph/icons8-login-60.png"
-                            alt="login"></a>
-                </div>
 
             </nav>
         </header>
         <main>
-
-
             <section id="display-block">
                 <h1>Add a work</h1>
                 <div class="container">
-                    <form method="POST" action="http://localhost:8000/works">
-
-
+                    <form>
                         <div class="input-add-form">
                             <label for="title">Title :</label>
                             <input type="text" id="title" name="title" required>
@@ -62,19 +43,17 @@
                         </div>
                         <div class="input-add-form">
                             <label for="image">image :</label>
-                            <input name="image" type="url" id="image" placeholder="https://api.jikan.moe/v4/top/anime"
+                            <input name="image" type="text" id="image" placeholder="https://api.jikan.moe/v4/top/anime"
                                 required>
                         </div>
                         <label for="comment">Comment :</label>
-                        <textarea name="comment" id="comment"></textarea>
+                        <textarea name="comment" id="comment" required></textarea>
                         <div class="btn-container">
                             <button class="btn">SAVE</button>
                         </div>
                     </form>
                 </div>
             </section>
-
-
         </main>
         <footer>
             <p>Copyrights 2024 &copy;</p>
@@ -84,8 +63,7 @@
                 <a href="#"><img src="../icons/icons8-github-ios-17-glyph/icons8-github-60.png" alt="admin github"></a>
             </div>
         </footer>
-        <script src="../javascript/navbarResponsive.js"></script>
-        <script src="../javascript/getFormData.js"></script>
+        <script src="../javascript/addWork.js"></script>
     </body>
 
 </html>

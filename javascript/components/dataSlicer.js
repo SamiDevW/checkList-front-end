@@ -5,7 +5,4 @@ const dataSlicer = (postData, current_page, rows) => {
     return postData.slice(startIndx, endIndx);
 }
 
-// const dataFilter = (data, searchInput) => {
-//     const filteredData = data.filter(el => el.title.trim().lowerCase().includes(searchInput))
-// }
-export { dataSlicer } 
+export default dataSlicer; 

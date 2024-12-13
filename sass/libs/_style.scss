@@ -59,6 +59,7 @@ p {
 	border: none;
 	border-radius: $input-border-radius;
 	padding: 10px;
+	cursor: pointer;
 }
 .btn:hover {
 	font-weight: bold;
@@ -92,7 +93,8 @@ nav {
 			padding: 1rem;
 		}
 
-		a:hover {
+		a img:hover {
+			height: fit-content;
 			box-shadow: 1px 1px 5px 3px rgba(19, 18, 18, 0.2);
 		}
 		.text-anchor:hover {

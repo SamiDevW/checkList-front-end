@@ -138,6 +138,7 @@ p {
   border: none;
   border-radius: 15px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -174,7 +175,9 @@ nav .navbar {
 nav .navbar a {
   padding: 1rem;
 }
-nav .navbar a:hover {
+nav .navbar a img:hover {
+  height: -moz-fit-content;
+  height: fit-content;
   box-shadow: 1px 1px 5px 3px rgba(19, 18, 18, 0.2);
 }
 nav .navbar .text-anchor:hover {

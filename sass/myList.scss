@@ -1,10 +1,9 @@
 @import "./libs/style";
 @import "libs/cards.scss";
-@import "libs/container.scss";
-
 .container {
 	@include containerStyle();
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	height: fit-content;
 	padding: 10px;
@@ -12,7 +11,69 @@
 	margin: 20px;
 	flex-wrap: wrap;
 	width: 80%;
+	.checklist {
+		display: flex;
+		align-items: center;
+		height: 25rem;
+		margin: 3rem 3rem 0;
+		padding: 1rem;
+		font-size: $h3;
+		color: $primary-color;
+		gap: 2rem;
+		.checklist-header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+			border: 1px gray solid;
+			border-radius: 15px;
+			height: 100%;
+			width: 20%;
+			h3 {
+				font-size: 1.5rem;
+				padding-top: 1rem;
+			}
+			P {
+				font-size: 1.5rem;
+			}
+			.checklist-image {
+				display: flex;
+				justify-content: center;
+				width: 80%;
+				height: 150px;
+				img {
+					border-radius: 15px;
+				}
+			}
+		}
+		.checklist-body {
+			border: 1px gray solid;
+			width: 80%;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			padding: 2rem;
+			justify-content: space-between;
+			height: 100%;
+			border-radius: 15px;
+			.checklist-dynamic {
+				display: flex;
+				gap: 2rem;
+				justify-content: flex-end;
+				align-items: center;
+				.btn {
+					height: fit-content;
+					border-radius: 1rem;
+				}
+				.status {
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+	}
 }
+
 input[type="checkbox"] {
 	transform: scale(1.8);
 }
@@ -58,9 +119,26 @@ input[type="checkbox"] {
 	display: flex;
 	justify-content: center;
 }
+#addBtn {
+	display: flex;
+	margin-left: 18rem;
+	button {
+		background-color: white;
+		font-size: $h3;
+		color: $primary-color;
+		width: fit-content;
+	}
+}
 @media screen and (max-width: 640px) {
 	.container {
 		flex-direction: column;
 		align-items: center;
+		.checklist {
+			p {
+			}
+			h3 {
+				font-size: 1rem;
+			}
+		}
 	}
 }

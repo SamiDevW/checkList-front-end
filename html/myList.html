@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <script type="module" src="../javascript/navbar.js" defer></script>
         <link rel="stylesheet" href="../css/myList.css">
         <title>CheckList</title>
     </head>
@@ -12,22 +12,6 @@
     <body>
         <header>
             <nav>
-                <div class="logo-container">
-                    <a href="#"><img id="logo" src="../icons/Icon_checklist-removebg-preview.png" alt="Logo"></a>
-                </div>
-                <a href="#" class="menu-burger">
-                    <img src="../icons/icons8-menu-ios-17-glyph/icons8-menu-60.png" alt="menu icon">
-                </a>
-                <div class="navbar">
-                    <a class="text-anchor" href="../">Home</a>
-                    <a class="text-anchor" href="./myList.html">MyList</a>
-                    <a class="text-anchor" href="./search.html">Search</a>
-                    <a class="text-anchor" href="./market.html">Market</a>
-                    <a href="./login.html"><img src="../icons/icons8-masle-user-ios-17-glyph/icons8-male-user-60.png"
-                            alt="login"></a>
-                    <a href="./login.html"><img src="./icons/icons8-login-ios-17-glyph/icons8-login-60.png"
-                            alt="login"></a>
-                </div>
 
             </nav>
         </header>
@@ -36,17 +20,33 @@
             <h2>
                 Saved Anime
             </h2>
-
-
+            <div id="addBtn"><button class="btn">Add a book</button></div>
             <section id="display-block">
-                <div class="container ">
+                <div class="container">
+                    <div class="checklist">
+                        <div class="checklist-header">
+                            <h3>To kill a mockingbird</h3>
+                            <div class="checklist-image"><img src="../images/July_night_sky_(35972569256).jpg" alt="">
+                            </div>
+                            <p>40 Pages left</p>
+                        </div>
+                        <div class="checklist-body">
+                            <p class="checklist-comment">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos doloremque illum nobis
+                                totam beatae odio!
+                                Quia eaque perspiciatis tempore odit dolor error in sunt neque, quo magni. Nobis, animi
+                                omnis?</p>
+                            <div class="checklist-dynamic">
+                                <button class="btn">Show work</button>
+                                <input type="checkbox" name="status" id="status" class="status">
+                            </div>
+                        </div>
 
+                    </div>
 
                 </div>
             </section>
-            <div class="titles">
 
-            </div>
         </main>
         <footer>
             <p>Copyrights 2024 &copy;</p>
@@ -58,9 +58,9 @@
         </footer>
 
 
-        <script src="../javascript/navbarResponsive.js"></script>
-        <script src="../javascript/myListSeeds.js"></script>
 
+        <script src="../javascript/myListSeeds.js"></script>
+        <script src="../javascript/addBtn.js"></script>
     </body>
 
 </html>
