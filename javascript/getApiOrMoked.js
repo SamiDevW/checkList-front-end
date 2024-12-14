@@ -37,6 +37,7 @@ const getDataAndDisplay = async () => {
         search.addEventListener('keyup', (e) => {
             container.innerHTML = '';
             current_page = 1;
+            pageNumber.innerText = current_page;
             const filteredData = filterData(e, dataResponse.data)
             sliceAndDisplay(filteredData);
         })
