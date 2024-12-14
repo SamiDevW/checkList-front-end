@@ -82,6 +82,7 @@ input:invalid {
 	border: 2px solid $primary-color !important;
 }
 .validityInfo {
+	color: orange;
 	display: none;
 }
 .invalid {

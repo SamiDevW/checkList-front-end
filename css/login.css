@@ -300,6 +300,15 @@ input:invalid {
   border: 2px solid #fc1f15 !important;
 }
 
+.validityInfo {
+  color: orange;
+  display: none;
+}
+
+.invalid {
+  display: inline;
+}
+
 @media screen and (max-width: 1200px) {
   #loginContainer {
     width: 35%;

@@ -2,7 +2,7 @@ import dataSlicer from "./components/dataSlicer.js";
 import filterData from "./components/filterData.js";
 import displayCards from "./components/displayCards.js";
 let current_page = 1; // staring page
-const elementsPerPage = 9; // rows_per_page
+const elementsPerPage = 6; // rows_per_page
 const search = document.querySelector('#search')
 const container = document.querySelector('.container');
 const btnNext = document.querySelector('#btnNext');
@@ -36,6 +36,7 @@ const getDataAndDisplay = async () => {
     if (search) {
         search.addEventListener('keyup', (e) => {
             container.innerHTML = '';
+            current_page = 1;
             const filteredData = filterData(e, dataResponse.data)
             sliceAndDisplay(filteredData);
         })

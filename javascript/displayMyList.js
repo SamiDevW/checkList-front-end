@@ -3,10 +3,33 @@ const placeholderP = document.querySelector(".checklist-comment")
 let placeholderPTC = placeholderP.textContent
 placeholderP.textContent = placeholderPTC.length > 400 ? placeholderPTC.substring(0, 400) + ' <show more...>' : placeholderPTC
 //
+const showButton = (container, currentData) => {
+    // Button
+    const button = document.createElement('button');
+    button.className = 'btn';
+    button.id = 'showBtn';
+    button.textContent = 'Show work';
+
+    //Checkbox
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.name = 'status';
+    checkbox.id = 'status';
+    checkbox.className = 'status';
+
+    //Append
+    container.appendChild(button);
+    container.appendChild(checkbox);
+    // Event
+    button.addEventListener('click', () => {
+        localStorage.setItem('temp', JSON.stringify(currentData))
+        window.location.href = "./showPage.html";
+    })
+}
+//
 const card = function (container) {
     const listItems = JSON.parse(localStorage.getItem("myList"))
     listItems.forEach(x => {
-        console.log(x.image);
         // Head
         const checkHead = document.createElement('div')
         checkHead.classList.add('checklist-header')
@@ -35,8 +58,7 @@ const card = function (container) {
 
         checkComment.textContent = shortenedComment;
         const checkDynamic = document.createElement('div')
-        checkDynamic.innerHTML = `<button class="btn" id="showBtn">Show work</button>
-        <input type="checkbox" name="status" id="status" class="status">`
+        showButton(checkDynamic, x)
         //
         const body = [checkComment, checkDynamic]
         const bodyClasses = ["checklist-comment", "checklist-dynamic"]
@@ -51,11 +73,8 @@ const card = function (container) {
         //
         checklist.setAttribute('class', 'checklist');
         container.appendChild(checklist)
-        const showBtn = document.querySelector('#showBtn')
-        showBtn.addEventListener('click', () => {
-            localStorage.setItem('temp', JSON.stringify(x))
-            window.location.href = "./showPage.html";
-        })
+
+
 
 
     })
@@ -64,3 +83,4 @@ const card = function (container) {
 
 }
 card(container);
+

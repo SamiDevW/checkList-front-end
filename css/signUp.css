@@ -326,6 +326,7 @@ input:invalid {
 }
 
 .validityInfo {
+  color: orange;
   display: none;
 }
 
