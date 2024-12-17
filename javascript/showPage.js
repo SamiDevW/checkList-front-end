@@ -25,7 +25,7 @@ const showImgDiv = document.createElement('div');
 showImgDiv.classList.add('show-img');
 //
 const imgElement = document.createElement('img');
-imgElement.src = (tempData.image).includes('http') ? tempData.image : '../images/July_night_sky_(35972569256).jpg';
+imgElement.src = (tempData.image).includes('http') ? tempData.image : '../images/cody-board-UMlXDGxY6Kc-unsplash.jpg';
 imgElement.alt = '';
 showImgDiv.appendChild(imgElement);
 

@@ -20,11 +20,11 @@
                 <div id="loginContainer">
                     <h1>LOGIN</h1>
                     <form action="#" id="loginForm">
-                        <label for="username">Email :</label>
+                        <label for="username">Username :</label>
                         <input class="formInput" type="text" name="username" id="username" required>
                         <label for="password">Password :</label>
                         <input class="formInput" type="password" name="password" id="password"
-                            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*d)(?=.*[^ws]).{8,}$" required>
+                            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$" required>
                         <span class="validityInfo">Your password must contain at least :
                             - 8 characters
                             - 1 uppercase letter, 1 lowercase letter, 1 digit, 1 special character </span>

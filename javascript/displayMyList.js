@@ -26,6 +26,7 @@ const showButton = (container, currentData) => {
         window.location.href = "./showPage.html";
     })
 }
+
 //
 const card = function (container) {
     const listItems = JSON.parse(localStorage.getItem("myList"))
@@ -41,13 +42,16 @@ const card = function (container) {
         checkImgC.classList.add('checklist-image')
         const checkImg = document.createElement('img')
         const imgCond = x.image.includes('https')
-        checkImg.src = imgCond ? x.image : "../images/July_night_sky_(35972569256).jpg";
+        checkImg.src = imgCond ? x.image : "../images/cody-board-UMlXDGxY6Kc-unsplash.jpg";
         checkImgC.append(checkImg)
         //page info
-        const checkPages = document.createElement('p')
-        checkPages.textContent = '40 pages left'
+        const checkBar = document.createElement('div')
+        checkBar.classList.add('progressBar')
+        const checkProgress = document.createElement('div')
+        checkProgress.classList.add('progress')
+        checkBar.append(checkProgress)
         //
-        const head = [checkTitle, checkImgC, checkPages]
+        const head = [checkTitle, checkImgC, checkBar]
         head.forEach(x => checkHead.append(x))
         // Body
         const checkBody = document.createElement('div')
@@ -55,7 +59,7 @@ const card = function (container) {
         const checkComment = document.createElement('p')
         //
         let shortenedComment = x.comment.length > 400 ? x.comment.substring(0, 400) + ' <show more...>' : x.comment;
-
+        //
         checkComment.textContent = shortenedComment;
         const checkDynamic = document.createElement('div')
         showButton(checkDynamic, x)

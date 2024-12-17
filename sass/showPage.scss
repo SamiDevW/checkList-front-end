@@ -2,6 +2,7 @@
 #display-block {
 	display: flex;
 	justify-content: center;
+	height: 100vh;
 }
 .container {
 	@include containerStyle();

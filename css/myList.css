@@ -78,6 +78,41 @@ th {
   padding: 0;
 }
 
+.custom-alert {
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.warning {
+  background-color: #fc1f15;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 html {
   font-size: 10px;
 }
@@ -346,8 +381,17 @@ nav .navbar .text-anchor:hover {
   font-size: 1.5rem;
   padding-top: 1rem;
 }
-.container .checklist .checklist-header P {
-  font-size: 1.5rem;
+.container .checklist .checklist-header .progressBar {
+  height: 10px;
+  width: 80%;
+  background-color: #fc1f15;
+  border-radius: 15px;
+}
+.container .checklist .checklist-header .progressBar .progress {
+  background-color: white;
+  width: 30%;
+  height: 10px;
+  border-radius: 15px;
 }
 .container .checklist .checklist-header .checklist-image {
   display: flex;
@@ -398,7 +442,7 @@ input[type=checkbox] {
 
 #addBtn {
   display: flex;
-  margin-left: 18rem;
+  margin-left: 11rem;
 }
 #addBtn button {
   background-color: white;
@@ -406,6 +450,10 @@ input[type=checkbox] {
   color: #fc1f15;
   width: -moz-fit-content;
   width: fit-content;
+}
+#addBtn button:hover {
+  background-color: #fc1f15;
+  color: white;
 }
 
 @media screen and (max-width: 640px) {

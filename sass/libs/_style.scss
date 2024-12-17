@@ -1,4 +1,5 @@
 @import "./reset.scss";
+@import "./customAlert.scss";
 @import "./variables";
 @import "./mixins";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap");
@@ -14,6 +15,7 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
+
 	background-color: $secondary-background;
 	font-family: "Roboto Condensed", sans-serif;
 	height: 100vh;

@@ -1,5 +1,6 @@
-import getFormDataIntoObject from "./components/getFormDataIntoObject"
+import getFormDataIntoObject from "./components/getFormDataIntoObject.js"
 const form = document.querySelector('form')
+import customAlert from "./components/customAlert.js";
 
 
 const handleSubmit = (e) => {
@@ -16,7 +17,11 @@ const handleSubmit = (e) => {
         console.log(storedData);
         storedData.push(dataObject)
         localStorage.setItem("myList", JSON.stringify(storedData))
-        window.location.href = "./myList.html";
+        customAlert('Work Added')
+        setTimeout(() => {
+            window.location.href = "./myList.html";
+        }, 2000)
+
     }
 }
 form.addEventListener('submit', handleSubmit)
