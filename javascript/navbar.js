@@ -1,10 +1,9 @@
 import navbarResponsive from "./components/navbarResponsive.js";
-// Create the nav element
+// Select the nav element
 const nav = document.querySelector('nav');
 
 // Create the logo container with an anchor and image
 defineLogo(nav);
-
 // Create the menu burger
 const menuBurger = document.createElement('a');
 menuBurger.href = '#';
@@ -39,28 +38,32 @@ links.forEach(link => {
 const navIcons = document.createElement('div')
 const userIcon = document.createElement('a');
 userIcon.href = './login.html';
+//
 const userImg = document.createElement('img');
 userImg.src = '../icons/icons8-male-user-ios-17-glyph/icons8-male-user-60.png';
 userImg.alt = 'login';
 userIcon.appendChild(userImg);
+//
 const loginIcon = document.createElement('a');
 loginIcon.href = './login.html';
 const loginImg = document.createElement('img');
 loginImg.src = '../icons/icons8-login-ios-17-glyph/icons8-login-60.png';
 loginImg.alt = 'login';
 loginIcon.appendChild(loginImg);
+//
 const signupIcon = document.createElement('a');
 signupIcon.href = './signup.html';
 const signupImg = document.createElement('img');
 signupImg.src = '../icons/icons8-register-ios-17-glyph/icons8-register-60.png';
 signupImg.alt = 'signup';
+//
 signupIcon.appendChild(signupImg);
 navIcons.appendChild(userIcon);
 navIcons.appendChild(loginIcon);
 navIcons.appendChild(signupIcon);
 navbar.appendChild(navIcons)
 nav.appendChild(navbar);
-
+//
 function defineLogo(nav) {
     // Create the logo container
     const logoContainer = document.createElement('div');
@@ -79,4 +82,4 @@ function defineLogo(nav) {
     // Append the logo container to the nav element
     nav.appendChild(logoContainer);
 }
-navbarResponsive(navbar, menuBurger)
+navbarResponsive(navbar, menuBurger);

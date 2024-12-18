@@ -1,8 +1,8 @@
 import dataSlicer from "./components/dataSlicer.js";
 import filterData from "./components/filterData.js";
 import displayCards from "./components/displayCards.js";
-let current_page = 1; // staring page
-const elementsPerPage = 6; // rows_per_page
+let current_page = 1;
+const elementsPerPage = 6;
 const search = document.querySelector('#search')
 const container = document.querySelector('.container');
 const btnNext = document.querySelector('#btnNext');
@@ -18,7 +18,6 @@ const fetchData = async () => {
             console.log(data.data);
             return data;
         }
-
     } catch (error) {
         console.log(error.message);
 
@@ -28,8 +27,6 @@ const fetchData = async () => {
 const getDataAndDisplay = async () => {
     const dataResponse = await fetchData();
     sliceAndDisplay(dataResponse.data);
-    // if there's a search element search
-    // search is only on the search page
     if (search) {
         search.addEventListener('keyup', (e) => {
             container.innerHTML = '';
@@ -39,7 +36,6 @@ const getDataAndDisplay = async () => {
             sliceAndDisplay(filteredData);
         })
     }
-
     btnNext.addEventListener('click', () => {
         current_page += 1;
         pageNumber.innerText = current_page;

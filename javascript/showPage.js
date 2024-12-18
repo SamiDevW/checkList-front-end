@@ -1,6 +1,6 @@
-
 const container = document.querySelector('.container');
 const h1 = document.querySelector('h1');
+// Data source :
 const tempData = JSON.parse(localStorage.getItem('temp'))
 //
 h1.textContent = tempData.title

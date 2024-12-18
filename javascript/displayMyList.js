@@ -28,15 +28,19 @@ const showButton = (container, currentData) => {
 }
 
 //
-const card = function (container) {
+const myListCard = function (container) {
+    // Data source :
     const listItems = JSON.parse(localStorage.getItem("myList"))
+    //
     listItems.forEach(x => {
         // Head
         const checkHead = document.createElement('div')
         checkHead.classList.add('checklist-header')
+
         // title
         const checkTitle = document.createElement('h3')
         checkTitle.innerText = x.title;
+
         //images
         const checkImgC = document.createElement('div')
         checkImgC.classList.add('checklist-image')
@@ -44,15 +48,18 @@ const card = function (container) {
         const imgCond = x.image.includes('https')
         checkImg.src = imgCond ? x.image : "../images/cody-board-UMlXDGxY6Kc-unsplash.jpg";
         checkImgC.append(checkImg)
+
         //page info
         const checkBar = document.createElement('div')
         checkBar.classList.add('progressBar')
         const checkProgress = document.createElement('div')
         checkProgress.classList.add('progress')
         checkBar.append(checkProgress)
+
         //
         const head = [checkTitle, checkImgC, checkBar]
         head.forEach(x => checkHead.append(x))
+
         // Body
         const checkBody = document.createElement('div')
         checkBody.classList.add("checklist-body")
@@ -78,13 +85,10 @@ const card = function (container) {
         checklist.setAttribute('class', 'checklist');
         container.appendChild(checklist)
 
-
-
-
     })
 
 
 
 }
-card(container);
+myListCard(container);
 

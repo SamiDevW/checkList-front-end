@@ -2,7 +2,7 @@
 #display-block {
 	display: flex;
 	justify-content: center;
-	height: 80vh;
+	height: 100vh;
 	align-items: center;
 }
 .container {
@@ -13,7 +13,7 @@
 	padding: 10px;
 	font-size: 1.5rem;
 	margin: 20px;
-	width: 70%;
+	width: 80%;
 	color: white;
 	.show-info {
 		width: 40%;
@@ -39,5 +39,15 @@
 	.container {
 		flex-direction: column;
 		align-items: center;
+		gap: 2rem;
+		.show-info {
+			width: 80%;
+		}
+		.show-img {
+			width: 80%;
+			border: none;
+			border-top: 1px #fc1f15 solid;
+			padding: 2rem;
+		}
 	}
 }

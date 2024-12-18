@@ -269,7 +269,7 @@ nav .navbar .text-anchor:hover {
 #display-block {
   display: flex;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
   align-items: center;
 }
 
@@ -284,7 +284,7 @@ nav .navbar .text-anchor:hover {
   padding: 10px;
   font-size: 1.5rem;
   margin: 20px;
-  width: 70%;
+  width: 80%;
   color: white;
 }
 .container .show-info {
@@ -310,5 +310,15 @@ nav .navbar .text-anchor:hover {
   .container {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
+  }
+  .container .show-info {
+    width: 80%;
+  }
+  .container .show-img {
+    width: 80%;
+    border: none;
+    border-top: 1px #fc1f15 solid;
+    padding: 2rem;
   }
 }/*# sourceMappingURL=showPage.css.map */
