@@ -412,12 +412,6 @@ nav .navbar .text-anchor:hover {
   justify-content: center;
 }
 
-@media screen and (max-width: 640px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 #page-control {
   display: flex;
   justify-content: center;
@@ -427,4 +421,16 @@ nav .navbar .text-anchor:hover {
 #page-control #page {
   font-size: 3rem;
   color: antiquewhite;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #filters-container,
+  .searchBar {
+    width: 80%;
+    margin: 2rem auto;
+  }
 }/*# sourceMappingURL=search.css.map */

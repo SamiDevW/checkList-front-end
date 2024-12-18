@@ -38,6 +38,7 @@
 				height: 10px;
 				width: 80%;
 				background-color: $primary-color;
+				margin-bottom: 2rem;
 				border-radius: 15px;
 				.progress {
 					background-color: white;
@@ -107,12 +108,25 @@ input[type="checkbox"] {
 	}
 }
 @media screen and (max-width: 640px) {
+	#addBtn {
+		justify-content: center;
+		margin: 0;
+	}
 	.container {
-		flex-direction: column;
-		align-items: center;
 		.checklist {
-			h3 {
-				font-size: 1rem;
+			margin-bottom: 2rem;
+			border: 1px gray solid;
+			padding: 2rem;
+			border-radius: 15px;
+			flex-direction: column;
+			height: fit-content;
+			.checklist-body {
+				width: 80%;
+				margin: 1rem;
+			}
+			.checklist-header {
+				width: 80%;
+				margin: 0;
 			}
 		}
 	}

@@ -40,7 +40,10 @@ if (form) {
 
 
 passwords.forEach(x => {
-    x.addEventListener('keyup', (e) => {
-        checkValidity(e.target)
-    })
+    if (passwords.length > 1) {
+        x.addEventListener('keyup', (e) => {
+            checkValidity(e.target)
+        })
+    }
+
 })
