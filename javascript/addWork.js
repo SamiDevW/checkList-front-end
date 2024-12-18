@@ -1,8 +1,7 @@
 import getFormDataIntoObject from "./components/getFormDataIntoObject.js"
 const form = document.querySelector('form')
 import customAlert from "./components/customAlert.js";
-
-
+//
 const handleSubmit = (e) => {
     e.preventDefault()
     if (e.key === 'Enter' || e.type === "submit") {

@@ -37,8 +37,6 @@ if (form) {
     form.addEventListener("submit", handleSubmit)
 }
 //
-
-
 passwords.forEach(x => {
     if (passwords.length > 1) {
         x.addEventListener('keyup', (e) => {

@@ -27,6 +27,7 @@ const fetchData = async () => {
 const getDataAndDisplay = async () => {
     const dataResponse = await fetchData();
     sliceAndDisplay(dataResponse.data);
+    // search
     if (search) {
         search.addEventListener('keyup', (e) => {
             container.innerHTML = '';
@@ -36,6 +37,7 @@ const getDataAndDisplay = async () => {
             sliceAndDisplay(filteredData);
         })
     }
+    // pagination
     btnNext.addEventListener('click', () => {
         current_page += 1;
         pageNumber.innerText = current_page;

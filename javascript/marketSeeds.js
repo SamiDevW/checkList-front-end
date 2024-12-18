@@ -1,5 +1,4 @@
 const container = document.querySelector(".container")
-
 const card = function (cardContainer) {
     const price = Math.floor(Math.random() * 80)
     let cardHTML = `
@@ -9,8 +8,7 @@ const card = function (cardContainer) {
                         <p class="price">Price : ${price}</p>
                         <a href="#" class="add-to-cart">See seller's profile</a>
                     </div>
-               
-        
+                       
 `
     const div = document.createElement('div')
     div.setAttribute('class', 'market-card');
